@@ -12,7 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-import logo from "/public/images/white-logo.svg";
+import logo from "/public/images/kiprasImage/kipras.jpeg";
 import blackLogo from "/public/images/black-logo.svg";
 
 const Navbar: React.FC = () => {
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
     ? "collapse navbar-collapse mean-menu"
     : "collapse navbar-collapse show";
   const classTwo: string = menu
-    ? "navbar-toggler navbar-toggler-right collapsed"
+    ? "navbar-toggler navbar-toggler-right collapsed mt-2"
     : "navbar-toggler navbar-toggler-right";
 
   // SearchModal
@@ -52,15 +52,22 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg" id="navbar">
-        <div className="container-fluid position-relative">
+      <nav className="navbar navbar-expand-lg " id="navbar">
+        <div className="container-fluid position-relative ">
           <Link className="navbar-brand" href="/">
-            <Image src={logo} alt="Traz Logo" width={113} height={54} />
+            <Image
+              src={logo}
+              style={{ borderRadius: "15px" }}
+              alt="Kipras Logo"
+              width={100}
+              height={54}
+            />
           </Link>
 
           {/* Toggle navigation */}
-          <button 
+          <button
             className={classTwo}
+            style={{ marginBottom: "10px" }}
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -75,7 +82,11 @@ const Navbar: React.FC = () => {
           </button>
 
           {/* Menu For Desktop Device */}
-          <div className={classOne} id="navbarSupportedContent">
+          <div
+            className={classOne}
+            id="navbarSupportedContent"
+            style={{ marginTop: "15px" }}
+          >
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link
@@ -83,7 +94,7 @@ const Navbar: React.FC = () => {
                   href="#"
                   onClick={(e) => e.preventDefault()}
                 >
-                  Home
+                  Anasayfa
                 </Link>
 
                 <ul className="dropdown-menu">
@@ -129,7 +140,7 @@ const Navbar: React.FC = () => {
                     currentRoute === "/about-us/" ? "active" : ""
                   }`}
                 >
-                  About Us
+                  Hakkımızda
                 </Link>
               </li>
 
@@ -186,7 +197,7 @@ const Navbar: React.FC = () => {
                   href="#"
                   onClick={(e) => e.preventDefault()}
                 >
-                  Pages
+                  Sayfalar
                 </Link>
 
                 <ul className="dropdown-menu">
@@ -458,14 +469,14 @@ const Navbar: React.FC = () => {
                     currentRoute === "/contact-us/" ? "active" : ""
                   }`}
                 >
-                  Contact Us
+                  Bize Ulaşın
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* others-options */}
-          <div className="others-option d-flex align-items-center">
+          <div className="others-option d-flex align-items-center mt-3 xl:mt-4 2xl:mt-4 ">
             <div className="option-item">
               <div className="search-btn" onClick={handleToggleSearchModal}>
                 <i className="ri-search-line"></i>
@@ -474,7 +485,7 @@ const Navbar: React.FC = () => {
 
             <div className="option-item">
               <Link href="/request-quote" className="default-btn">
-                Request A Quote
+                Teklif isteyin
               </Link>
             </div>
           </div>
@@ -483,19 +494,20 @@ const Navbar: React.FC = () => {
 
       {/* Menu For Mobile Device */}
       <div
-        className={`modal mobile-menu-modal ${
+        className={`modal mobile-menu-modal  ${
           isMobileMenuActive ? "show" : ""
         }`}
       >
-        <div className="modal-dialog modal-dialog-scrollable">
-          <div className="modal-content">
-            <div className="modal-header d-flex align-items-center justify-content-between">
+        <div className="modal-dialog  modal-dialog-scrollable ">
+          <div className="modal-content ">
+            <div className="modal-header  d-flex align-items-center justify-content-between ">
               <div>
                 <Image
-                  src={blackLogo}
-                  alt="Traz Logo"
-                  width={100}
-                  height={41}
+                  src={logo}
+                  style={{ borderRadius: "5px" }}
+                  alt="Kipras Logo"
+                  width={60}
+                  height={80}
                 />
               </div>
 
@@ -506,7 +518,10 @@ const Navbar: React.FC = () => {
                 aria-label="Close"
                 onClick={handleToggleMobileMenu}
               >
-                <i className="ri-close-line"></i>
+                <i
+                  style={{ color: "black", marginRight: "20px" }}
+                  className="ri-close-line"
+                ></i>
               </button>
             </div>
 
@@ -568,7 +583,7 @@ const Navbar: React.FC = () => {
 
                 <AccordionItem uuid="b">
                   <AccordionItemHeading>
-                    <AccordionItemButton>Portfolio</AccordionItemButton>
+                    <AccordionItemButton>Portfolyo</AccordionItemButton>
                   </AccordionItemHeading>
 
                   <AccordionItemPanel>
@@ -883,7 +898,7 @@ const Navbar: React.FC = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Search here"
+                    placeholder="Arama.."
                   />
                   <button type="submit">
                     <i className="ri-search-line"></i>

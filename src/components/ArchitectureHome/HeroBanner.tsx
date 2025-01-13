@@ -51,7 +51,8 @@ const HeroBanner: React.FC = () => {
               data-aos-duration="600"
               data-aos-once="false"
             >
-              Aesthetix: Redefining Spaces with <span>Architectural Magic</span>
+              Kipras Group: Hayalleriniz ve Kipras{" "}
+              <span>Bu işi seveceksiniz</span>
             </h1>
             <p
               data-aos="fade-up"
@@ -59,11 +60,11 @@ const HeroBanner: React.FC = () => {
               data-aos-duration="600"
               data-aos-once="false"
             >
-              Welcome to Esta Architects, where innovation meets elegance. We
-              are a leading architecture firm dedicated to creating visionary
-              designs that transcend expectations.
+              Tecrübemiz ve yenilikçi yaklaşımımızla, şehrin siluetini
+              değiştirecek yeni projemizi sizlerle buluşturmak için gün
+              sayıyoruz.
             </p>
-            <div 
+            <div
               className="banner-btn"
               data-aos="fade-up"
               data-aos-delay="300"
@@ -71,12 +72,12 @@ const HeroBanner: React.FC = () => {
               data-aos-once="false"
             >
               <Link href="/contact-us" className="default-btn">
-                Contact Us
+                Bilgi ve iletişim için
               </Link>
             </div>
           </div>
         </div>
-        
+
         <div
           className="main-banner-image"
           style={{ backgroundImage: `url(/images/main-banner/banner1.png)` }}
@@ -85,7 +86,7 @@ const HeroBanner: React.FC = () => {
           data-aos-duration="600"
           data-aos-once="false"
         ></div>
- 
+
         <div className="main-banner-wrap-shape">
           <Image src={shapeImg} alt="Shape" width={502} height={287} />
         </div>
@@ -97,7 +98,7 @@ const HeroBanner: React.FC = () => {
             <i className="ri-play-fill"></i>
           </div>
         </div>
-          
+
         {socialLinksData && (
           <ul className="main-banner-social">
             {socialLinksData &&
@@ -113,18 +114,29 @@ const HeroBanner: React.FC = () => {
 
         <div className="main-banner-arrow">
           <Link href="/contact-us">
-            <Image src={arrowRightIcon} alt="arrow right" width={24} height={24} />
+            <Image
+              src={arrowRightIcon}
+              alt="arrow right"
+              width={24}
+              height={24}
+            />
           </Link>
         </div>
 
         <ul className="main-banner-info">
           <li>
-            <span>CALL:</span>
-            <a href="tel:3214264567">+321 426 4567</a>
-          </li>
-          <li>
-            <span>MAIL:</span>
-            <a href="mailto:trazteam@gmail.com">trazteam@gmail.com</a>
+            <span>MAIL: </span>
+            <a
+              style={{
+                border: "1px solid gray",
+                borderRadius: "10px",
+                padding: "4px 6px 4px 6px",
+                fontSize: "20px",
+              }}
+              href="mailto:info@kipras.com.tr"
+            >
+              info@kipras.com.tr
+            </a>
           </li>
         </ul>
       </div>

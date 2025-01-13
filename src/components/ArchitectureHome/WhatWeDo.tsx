@@ -10,7 +10,7 @@ const servicesData = [
   {
     id: "1",
     icon: "flaticon-measuring",
-    title: "Design",
+    title: "Tasarım",
     text: "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
     link: "/services/service-details",
     aosDelay: "100",
@@ -18,7 +18,7 @@ const servicesData = [
   {
     id: "2",
     icon: "flaticon-mansory",
-    title: "Construction",
+    title: "İnşaat",
     text: "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
     link: "/services/service-details",
     aosDelay: "200",
@@ -26,7 +26,7 @@ const servicesData = [
   {
     id: "3",
     icon: "flaticon-interior-design",
-    title: "Engineering",
+    title: "Mühendislik",
     text: "We are a leading architecture firm dedicated to creating visionary designs that transcend expectations.",
     link: "/services/service-details",
     aosDelay: "300",
@@ -46,9 +46,9 @@ const WhatWeDo: React.FC = () => {
             data-aos-once="true"
           >
             <h2>
-              What <span>We Do</span> For You
+              <span>Sizin için</span> neler yapacağız?
             </h2>
-            <Link href="/services">VIEW ALL SERVICES</Link>
+            <Link href="/services">Tüm Servislerimiz</Link>
           </div>
 
           {servicesData && (
@@ -72,7 +72,12 @@ const WhatWeDo: React.FC = () => {
                       </h3>
                       <p>{value.text}</p>
                       <Link href={value.link} className="services-btn">
-                        <Image src={arrowRightIcon} alt="arrow-right" width={18} height={18} />
+                        <Image
+                          src={arrowRightIcon}
+                          alt="arrow-right"
+                          width={18}
+                          height={18}
+                        />
                       </Link>
                     </div>
                   </div>
