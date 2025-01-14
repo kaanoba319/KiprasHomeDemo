@@ -31,7 +31,7 @@ const AboutUsContent: React.FC = () => {
           <div className="about-three-title">
             <span>HAKKIMIZDA</span>
             <h2>
-              Biz <b>KİPRAS GROUP</b>'uz. Hayalleri İnşa Ediyor, Geleceği Şekillendiriyoruz.
+              Biz <b>KİPRAS GROUPs </b>'uz. Hayalleri İnşa Ediyor, Geleceği Şekillendiriyoruz.
             </h2>
           </div>
 
