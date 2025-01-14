@@ -8,15 +8,15 @@ export default function Page() {
     <>
       <NavbarStyleTwo />
 
-      <PageTitle 
-        title="Request a Quote"
-        homeText="Home"
+      <PageTitle
+        title="Kariyerinizi bizimle yapın"
+        homeText="Anasayfa"
         homeUrl="/"
       />
 
       <RequestAQuoteForm />
- 
+
       <Footer />
     </>
-  )
+  );
 }
