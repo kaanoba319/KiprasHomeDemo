@@ -25,7 +25,12 @@ const AboutUsContent: React.FC = () => {
                 data-aos-once="true"
               >
                 <div className="arrow-shape">
-                  <Image src={arrowShape} alt="Shape" width={182} height={128} />
+                  <Image
+                    src={arrowShape}
+                    alt="Shape"
+                    width={182}
+                    height={128}
+                  />
                 </div>
               </div>
             </div>
@@ -40,7 +45,7 @@ const AboutUsContent: React.FC = () => {
               >
                 <div className="title">
                   <h2>
-                    Who We Are: Leading <span>Architectural Agency</span> Who
+                    Biz Kimiz: Leading <span>Architectural Agency</span> Who
                     Create Unique Living Spaces
                   </h2>
                 </div>
@@ -48,7 +53,12 @@ const AboutUsContent: React.FC = () => {
                 <div className="row justify-content-center">
                   <div className="col-lg-5">
                     <div className="inner-image">
-                      <Image src={aboutImg2} alt="about" width={690} height={590} />
+                      <Image
+                        src={aboutImg2}
+                        alt="about"
+                        width={690}
+                        height={590}
+                      />
                     </div>
                   </div>
 
@@ -63,19 +73,39 @@ const AboutUsContent: React.FC = () => {
 
                       <ul className="list">
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Innovative Design Approach
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Highly Skilled Expertise and Specialization
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />A client-centric
-                          approach for an architectural company
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
+                          A client-centric approach for an architectural company
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Sustainable Design Practices
                         </li>
                       </ul>

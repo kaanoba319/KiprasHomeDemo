@@ -15,7 +15,7 @@ const CoreFeatures: React.FC = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-12">
-              <div 
+              <div
                 className="features-content"
                 data-aos="fade-up"
                 data-aos-delay="100"
@@ -31,13 +31,18 @@ const CoreFeatures: React.FC = () => {
                   <div className="col-lg-4 col-md-5">
                     <div className="inner-box">
                       <div className="title">
-                        <h3 className="counter">35</h3>
+                        <h3 className="counter">22</h3>
                         <span>
                           YEARS OF <b>EXPERIENCE</b>
                         </span>
                       </div>
                       <div className="wrap">
-                        <Image src={featureImg} alt="image" width={161} height={231} />
+                        <Image
+                          src={featureImg}
+                          alt="image"
+                          width={161}
+                          height={231}
+                        />
                       </div>
                     </div>
                   </div>
@@ -53,16 +58,31 @@ const CoreFeatures: React.FC = () => {
 
                       <ul className="list">
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Innovative Design Approach
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
                           Highly Skilled Expertise and Specialization
                         </li>
                         <li>
-                          <Image src={arrowIcon} alt="arrow" width={28} height={10} />A client-centric
-                          approach
+                          <Image
+                            src={arrowIcon}
+                            alt="arrow"
+                            width={28}
+                            height={10}
+                          />
+                          A client-centric approach
                         </li>
                       </ul>
 
@@ -93,7 +113,12 @@ const CoreFeatures: React.FC = () => {
         </div>
 
         <div className="features-shape">
-          <Image src={architecturalShape} alt="Architectural Shape" width={477} height={562} />
+          <Image
+            src={architecturalShape}
+            alt="Architectural Shape"
+            width={477}
+            height={562}
+          />
         </div>
       </div>
     </>
