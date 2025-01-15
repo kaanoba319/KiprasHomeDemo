@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
   let ipAddress = req.headers["x-real-ip"] as string;
 
   const forwardedFor = req.headers["x-forwarded-for"] as string;
@@ -9,6 +9,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   res.status(200).json(ipAddress);
-};
-
-export default handler;
+}
