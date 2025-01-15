@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // For Static Export
-  output: 'export',
+  experimental: {
+    appDir: true, // Yeni "app" yapısını etkinleştirir
+  },
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
