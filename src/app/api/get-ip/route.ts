@@ -1,7 +1,14 @@
-// /app/api/get-ip/route.ts
-import { NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export async function GET() {
-  const ip = "Not found"; // Eğer proxy varsa, x-forwarded-for kullanılabilir.
-  return NextResponse.json({ ip });
-}
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+  let ipAddress = req.headers["x-real-ip"] as string;
+
+  const forwardedFor = req.headers["x-forwarded-for"] as string;
+  if (!ipAddress && forwardedFor) {
+    ipAddress = forwardedFor?.split(",").at(0) ?? "Unknown";
+  }
+
+  res.status(200).json(ipAddress);
+};
+
+export default handler;

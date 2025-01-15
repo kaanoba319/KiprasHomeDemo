@@ -35,7 +35,7 @@ const RequestAQuoteForm = () => {
   // IP adresini almak için fonksiyon
   const fetchIP = async () => {
     try {
-      const response = await fetch("https://ipinfo.io/json");
+      const response = await fetch("/api/get-ip");
       const data = await response.json();
       setFormData((prevData) => ({
         ...prevData,
