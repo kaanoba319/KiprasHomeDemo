@@ -1,12 +1,10 @@
-import { NextApiRequest, NextApiResponse } from "next";
+// route.ts
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
-  let ipAddress = req.headers["x-real-ip"] as string;
-
-  const forwardedFor = req.headers["x-forwarded-for"] as string;
-  if (!ipAddress && forwardedFor) {
-    ipAddress = forwardedFor?.split(",").at(0) ?? "Unknown";
-  }
-
-  res.status(200).json(ipAddress);
+import { NextRequest, NextResponse } from "next/server";
+export const dynamic = "force-dynamic"; // Bu satırı ekleyin
+export async function GET(req: NextRequest) {
+  const ip = (req.headers.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0];
+  // Eğer yerel ortamda çalışıyorsanız, IPv6 yerine IPv4 adresi kullanmayı deneyin
+  const realIp = ip === "::1" ? "127.0.0.1" : ip;
+  return NextResponse.json({ ip: realIp });
 }
