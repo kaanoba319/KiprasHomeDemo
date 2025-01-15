@@ -1,14 +1,14 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export const dynamic = "force-dynamic";
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+  let ipAddress = req.headers["x-real-ip"] as string;
 
-export async function GET(req: NextRequest) {
-  let ipAddress = req.headers.get("x-real-ip") || "Unknown";
-
-  const forwardedFor = req.headers.get("x-forwarded-for");
+  const forwardedFor = req.headers["x-forwarded-for"] as string;
   if (!ipAddress && forwardedFor) {
-    ipAddress = forwardedFor.split(",")[0] || "Unknown";
+    ipAddress = forwardedFor?.split(",").at(0) ?? "Unknown";
   }
 
-  return NextResponse.json({ ipAddress });
-}
+  res.status(200).json(ipAddress);
+};
+
+export default handler;
