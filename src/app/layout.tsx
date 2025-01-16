@@ -1,3 +1,4 @@
+// app/layout.tsx
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../public/css/animate.min.css";
 import "remixicon/fonts/remixicon.css";
